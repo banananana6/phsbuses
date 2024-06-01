@@ -83,7 +83,7 @@ elif st.session_state["authentication_status"] is None:
     st.title('Student: Bus viewing')
 
 st.subheader("Bus Loop View")
-st.image('beyond_phs.png')
+st.image('assets\img\beyond_phs.png')
 
 items1 = server_state.dat2[0]['items']
 cols = st.columns(max(9,len(items1)))
@@ -97,4 +97,4 @@ for i, item in enumerate(items2):
     with cols[i]:
         st.button(item, key=f"sorted4_{i}")
 
-st.image('phs_building.png')
+st.image('assets\img\phs_building.png')
