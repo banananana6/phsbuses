@@ -1,0 +1,5 @@
+PyYAML
+streamlit
+streamlit-authenticator
+streamlit-server-state
+streamlit-sortables

@@ -1,0 +1,24 @@
+credentials:
+  usernames:
+    bcovington:
+      email: bryan_a_covington@mcpsmd.org
+      name: Bryan Covington
+      #password: abc # To be replaced with hashed password
+      password: $2b$12$Wj9DVfr4hzpP06j4eiK3BeQIgejBAey8NFNW9yDhvhSYCQhoVRLSK
+    eferrara:
+      email: eli.ferrara256@gmail.com
+      name: Eli Ferrara
+      #password: def # To be replaced with hashed password
+      password: $2b$12$0q0zkFkhJ0w7ls2YmpAJQuFKB9kffP06rpr2bW7z112E62Y0xD1EK
+    ayu:
+      email: xiaoyumd@gmail.com
+      name: Alyssa Yu
+      #password: def
+      password: $2b$12$0q0zkFkhJ0w7ls2YmpAJQuFKB9kffP06rpr2bW7z112E62Y0xD1EK
+cookie:
+  expiry_days: 1
+  key: random_signature_key # Must be string
+  name: random_cookie_name
+preauthorized:
+  emails:
+  - smcs2026.sce@gmail.com
