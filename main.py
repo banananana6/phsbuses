@@ -83,7 +83,8 @@ elif st.session_state["authentication_status"] is None:
     st.title('Student: Bus viewing')
 
 st.subheader("Bus Loop View")
-st.image('https://github.com/banananana6/phsbuses/blob/deee3a87f707aca562977a4019fa4b9dfe85698e/assets/img/beyond_phs.png')
+img1 = Image.open('')
+st.image('https://github.com/banananana6/phsbuses/blob/deee3a87f707aca562977a4019fa4b9dfe85698e/assets/img/phs_building.png?raw=true')
 
 items1 = server_state.dat2[0]['items']
 cols = st.columns(max(9,len(items1)))
@@ -97,4 +98,4 @@ for i, item in enumerate(items2):
     with cols[i]:
         st.button(item, key=f"sorted4_{i}")
 
-st.image('https://github.com/banananana6/phsbuses/blob/deee3a87f707aca562977a4019fa4b9dfe85698e/assets/img/phs_building.png')
+st.image('https://github.com/banananana6/phsbuses/blob/deee3a87f707aca562977a4019fa4b9dfe85698e/assets/img/phs_building.png?raw=true')
