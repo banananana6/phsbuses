@@ -86,15 +86,28 @@ st.subheader("Bus Loop View")
 st.image('https://github.com/banananana6/phsbuses/blob/deee3a87f707aca562977a4019fa4b9dfe85698e/assets/img/beyond_phs.png?raw=true')
 
 items1 = server_state.dat2[0]['items']
-cols = st.columns(max(9,len(items1)))
-for i, item in enumerate(items1):
-    with cols[i]:
-        st.button(item, key=f"sorted3_{i}")
+cols = st.columns(max(8,len(items1)))
+if (len(items1)<=8):
+    for i, item in enumerate(items1):
+        if i>0:
+            with cols[i+8-len(items1)]:
+                st.button(item, key=f"sorted3_{i}")
+else:
+    for i, item in enumerate(items1):
+        if i>0:
+            with cols[i]:
+                st.button(item, key=f"sorted3_{i}")
 
 items2 = server_state.dat2[1]['items']
-cols = st.columns(max(9,len(items2)))
-for i, item in enumerate(items2):
-    with cols[i]:
-        st.button(item, key=f"sorted4_{i}")
-
+cols = st.columns(max(8,len(items2)))
+if (len(items2)<=8):
+    for i, item in enumerate(items2):
+        if i>0:
+            with cols[i+8-len(items2)]:
+                st.button(item, key=f"sorted4_{i}")
+else:
+    for i, item in enumerate(items2):
+        if i>0:
+            with cols[i]:
+                st.button(item, key=f"sorted4_{i}")
 st.image('https://github.com/banananana6/phsbuses/blob/deee3a87f707aca562977a4019fa4b9dfe85698e/assets/img/phs_building.png?raw=true')
