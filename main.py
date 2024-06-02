@@ -65,6 +65,25 @@ if st.session_state["authentication_status"]:
                     st.warning("Please enter a valid original bus number")
 
     st.subheader("Drag-and-drop")
+    if (st.button("Reset drag and drop")):
+        server_state.dat = [
+    {'header':'Loops','items':['Outer']},
+    {'items':['Inner']},
+    {'header':'Extra rows','items':['----','2201','2202','2203','2204','2205']},
+    {'items':['----','2701','2861','2702','2707','4701','4704','4711','4715',]},
+    {'items':['----','2307','2321','2328','2706']},
+    {'items':['----','2206','2207','2208','2209','2210','2211','2212']},
+    {'items':['----','4720','5702','5703','5715','5905']}
+        ]
+        server_state.dat2 = [
+    {'header':'Loops','items':['Outer']},
+    {'items':['Inner']},
+    {'header':'Extra rows','items':['----','2201','2202','2203','2204','2205']},
+    {'items':['----','2701','2861','2702','2707','4701','4704','4711','4715',]},
+    {'items':['----','2307','2321','2328','2706']},
+    {'items':['----','2206','2207','2208','2209','2210','2211','2212']},
+    {'items':['----','4720','5702','5703','5715','5905']}
+        ]
     if st.button('Show drag-and-drop' if not st.session_state.show_sorted else 'Hide drag-and-drop'):
         st.session_state.show_sorted = not st.session_state.show_sorted
     if st.session_state.show_sorted:
