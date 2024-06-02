@@ -65,7 +65,7 @@ if st.session_state["authentication_status"]:
                     st.warning("Please enter a valid original bus number")
 
     st.subheader("Drag-and-drop")
-    if st.button('Show sorted items' if not st.session_state.show_sorted else 'Hide sorted items'):
+    if st.button('Show drag-and-drop' if not st.session_state.show_sorted else 'Hide drag-and-drop'):
         st.session_state.show_sorted = not st.session_state.show_sorted
     if st.session_state.show_sorted:
         sorted = sort_items(server_state.dat, multi_containers=True)
