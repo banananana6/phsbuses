@@ -32,6 +32,36 @@ if 'dat2' not in server_state:
 if 'show_sorted' not in st.session_state:
     st.session_state.show_sorted = False
 
+st.subheader("Bus Loop View")
+st.image('https://github.com/banananana6/phsbuses/blob/deee3a87f707aca562977a4019fa4b9dfe85698e/assets/img/beyond_phs.png?raw=true')
+
+items1 = server_state.dat2[0]['items']
+cols = st.columns(max(8,len(items1)))
+if (len(items1)<=8):
+    for i, item in enumerate(items1):
+        if i>0:
+            with cols[i+8-len(items1)]:
+                st.button(item, key=f"sorted3_{i}")
+else:
+    for i, item in enumerate(items1):
+        if i>0:
+            with cols[i]:
+                st.button(item, key=f"sorted3_{i}")
+
+items2 = server_state.dat2[1]['items']
+cols = st.columns(max(8,len(items2)))
+if (len(items2)<=8):
+    for i, item in enumerate(items2):
+        if i>0:
+            with cols[i+8-len(items2)]:
+                st.button(item, key=f"sorted4_{i}")
+else:
+    for i, item in enumerate(items2):
+        if i>0:
+            with cols[i]:
+                st.button(item, key=f"sorted4_{i}")
+st.image('https://github.com/banananana6/phsbuses/blob/deee3a87f707aca562977a4019fa4b9dfe85698e/assets/img/phs_building.png?raw=true')
+
 name, authentication_status, username = authenticator.login(fields={'Form name':'Login', 'Username':'Username', 'Password':'Password','Login':'Login'})
 print(st.session_state["authentication_status"])
 print(st.session_state["username"])
@@ -96,37 +126,5 @@ if st.session_state["authentication_status"]:
 
 elif st.session_state["authentication_status"] is False:
     st.error('Username/password is incorrect')
-    st.title('Student: Bus viewing')
 elif st.session_state["authentication_status"] is None:
     st.warning('For admins only: please enter your username and password')
-    st.title('Student: Bus viewing')
-
-st.subheader("Bus Loop View")
-st.image('https://github.com/banananana6/phsbuses/blob/deee3a87f707aca562977a4019fa4b9dfe85698e/assets/img/beyond_phs.png?raw=true')
-
-items1 = server_state.dat2[0]['items']
-cols = st.columns(max(8,len(items1)))
-if (len(items1)<=8):
-    for i, item in enumerate(items1):
-        if i>0:
-            with cols[i+8-len(items1)]:
-                st.button(item, key=f"sorted3_{i}")
-else:
-    for i, item in enumerate(items1):
-        if i>0:
-            with cols[i]:
-                st.button(item, key=f"sorted3_{i}")
-
-items2 = server_state.dat2[1]['items']
-cols = st.columns(max(8,len(items2)))
-if (len(items2)<=8):
-    for i, item in enumerate(items2):
-        if i>0:
-            with cols[i+8-len(items2)]:
-                st.button(item, key=f"sorted4_{i}")
-else:
-    for i, item in enumerate(items2):
-        if i>0:
-            with cols[i]:
-                st.button(item, key=f"sorted4_{i}")
-st.image('https://github.com/banananana6/phsbuses/blob/deee3a87f707aca562977a4019fa4b9dfe85698e/assets/img/phs_building.png?raw=true')
