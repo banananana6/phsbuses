@@ -29,8 +29,8 @@ if 'dat' not in server_state:
     ]
 if 'dat2' not in server_state:
     server_state.dat2 = server_state.dat.copy()
-if 'show_sorted' not in st.session_state:
-    st.session_state.show_sorted = False
+if 'show_dd' not in st.session_state:
+    st.session_state.show_dd = False
 
 st.subheader("Bus Loop View")
 st.image('https://github.com/banananana6/phsbuses/blob/deee3a87f707aca562977a4019fa4b9dfe85698e/assets/img/beyond_phs.png?raw=true')
