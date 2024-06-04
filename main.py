@@ -114,9 +114,9 @@ if st.session_state["authentication_status"]:
     {'items':['----','2206','2207','2208','2209','2210','2211','2212']},
     {'items':['----','4720','5702','5703','5715','5905']}
         ]
-    if st.button('Show drag-and-drop' if not st.session_state.show_sorted else 'Hide drag-and-drop'):
-        st.session_state.show_sorted = not st.session_state.show_sorted
-    if st.session_state.show_sorted:
+    if st.button('Show drag-and-drop' if not st.session_state.show_dd else 'Hide drag-and-drop'):
+        st.session_state.show_dd = not st.session_state.show_dd
+    if st.session_state.show_dd:
         sorted = sort_items(server_state.dat, multi_containers=True)
         server_state.dat = sorted.copy()
 
